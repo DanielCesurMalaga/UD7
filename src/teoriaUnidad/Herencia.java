@@ -1,5 +1,7 @@
 package teoriaUnidad;
 
+import java.io.Serializable;
+
 public class Herencia {
    public static void main(String[] args) {
       // crear un objeto AAA.
@@ -10,18 +12,21 @@ public class Herencia {
 // creamos tres clases: A, AA, AAA, AA hereda de A, AAA hereda de AA.
 // cada clase tiene un constructor sin parámetros y saca por pantalla el nombre de la clase.
 
-class A {
+class A implements Serializable, Comparable{
    public A(int numero){
-      System.out.println("A: "+ numero);
+      System.out.println("A");
    }
-   public A(){
-      System.out.println("A: ");
-   }
+   public A(){}
+   @Override
+   public int compareTo(Object o) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+   };
 }
 
 class AA extends A  {
    public AA() {
-      super(56);
+      super();
       System.out.println("AA");
    }
 }
