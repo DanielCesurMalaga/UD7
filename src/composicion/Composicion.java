@@ -3,11 +3,20 @@ package composicion;
 import java.util.ArrayList;
 import java.util.List;
 
+import composicion.Hotel.Habitacion;
+
 // hacer dos composiciones, agregación y composición.
 
 public class Composicion {
    public static void main(String[] args) {
-
+      // creo un hotel.
+      Hotel miHotel = new Hotel();
+      // crear una recepción.
+      // Recepcion miRecepcion = new Recepcion();
+      // crear una habitación
+      // Habitacion miHabitacion = new Habitacion();
+      // crear una habitacion sin error = anadirHabitacion
+      // añadir 5 habitaciones al hotel, cada una de medidas 3*4
    }
 
 }
@@ -44,6 +53,11 @@ class Hotel {
 
    public void setMiRecepcion(Recepcion miRecepcion) {
       this.miRecepcion = miRecepcion;
+   }
+
+   public void anadirHabitacion(){
+      
+      misHabitaciones.add(new Habitacion());
    }
 
    class Habitacion {
